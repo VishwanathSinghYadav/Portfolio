@@ -448,6 +448,7 @@ header .circleshape{
     padding: 1rem 1.2rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .gallery-image{
@@ -533,7 +534,74 @@ header .circleshape{
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-
-
+.more-oeuvre{
+    display: flex;
+    justify-content: center;
+}
 
 /* oeuvre end */
+
+/* About */
+
+.about{
+    overflow: hidden;
+}
+
+.about img{
+    max-width: 600px;
+}
+
+.about .text{
+    margin-top: 1rem;
+}
+
+.skills{
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.skill {
+    margin: 1rem 0;
+}
+
+.skill-title {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+    position: relative;
+    overflow: hidden;
+    height: 8px;
+    border-radius: 6px;
+    width: 70%;
+    background-color: var(--main-light);
+}
+
+.skill-progress{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+
+.about .column-1{
+    position: relative;
+}
+
+.about .column-1:before{
+    content: "About";
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 800;
+    color: var(--main-color);
+    opacity: 0.04;
+    top: 20px;
+    top: 0;
+    line-height: 0;
+}
+
+/* About end */
