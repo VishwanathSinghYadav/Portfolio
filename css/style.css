@@ -744,3 +744,42 @@ header .circleshape{
 }
 
 /* contact end */
+
+/* Footer */
+
+footer{
+    background-color: var(--dark-color);
+    padding: 6rem 0;
+}
+
+.footer .grid-4{
+    display: grid;
+    grid-template-columns: 3.5fr 2fr 2fr;
+}
+
+.grid-4-col{
+    padding: 0 1.7rem;
+}
+
+.footer .title-sm{
+    color: var(--light-color);
+    margin-bottom: 0.9rem;
+}
+
+.footer .text{
+    color: #aaa;
+}
+
+.footer-links a{
+    color: #888;
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-bottom: .4rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover{
+    color: var(--main-color)
+}
+
+/* Footer end */
