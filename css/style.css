@@ -51,6 +51,11 @@ img{
     margin: 0 auto;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
 .grid-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -73,10 +78,16 @@ img{
 }
 
 .image{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.z-index {
+    position: relative;
+    z-index: 2;
+  }
 
 .section{
     padding: 7rem 0;
@@ -260,6 +271,63 @@ nav .container{
     background-color: var(--main-dark);
 }
 
+.hamburger-menu {
+    width: 2.7rem;
+    height: 3rem;
+    z-index: 10;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .hamburger-menu .bar {
+    position: relative;
+    width: 2.1rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--dark-one);
+    transition: 0.5s;
+  }
+
+  .bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  width: 2.1rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--dark-one);
+  transition: 0.5s;
+}
+
+.bar:before {
+  transform: translateY(-9px);
+}
+
+.bar:after {
+  transform: translateY(9px);
+}
+
+nav.open .hamburger-menu .bar {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+
+nav.open .hamburger-menu .bar:before {
+  transform: translateY(0) rotate(45deg);
+  background-color: var(--light-one);
+}
+
+nav.open .hamburger-menu .bar:after {
+    transform: translateY(0) rotate(-45deg);
+    background-color: var(--light-one);
+}
+  
+nav.open .links {
+    transform: translateX(0);
+}
+
 .header-content .container.grid-2{
     grid-template-columns: 2.5fr 3.5fr;
     min-height: calc(100vh - 10rem) ;
@@ -324,6 +392,8 @@ header .circleshape{
     right: 15%;
     top: 22%;
 }
+
+
 
 /* header end */
 
